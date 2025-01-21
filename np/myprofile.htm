@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <style>
+    .header {
+      background-color: black;
+      color: white;
+      padding: 0px;
+      text-align: center;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: gainsboro;
+    }
+
+    form{
+      border: 0px solid;
+      border-radius: 12px;
+      padding: 5px;
+    }
+    
+    .container {  
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  line-height: 2.8;
+}
+
+.left-item, .right-item {
+}
+
+.right-item{
+  color: grey;
+}
+
+.moatain{
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: white;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  --active: orange;
+  --active-inner: #fff;
+  --focus: 2px rgba(39, 94, 254, .3);
+  --border: #BBC1E1;
+  --border-hover: orange;
+  --background: #fff;
+  --disabled: #F6F8FF;
+  --disabled-inner: #E1E6F9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 21px;
+  outline: none;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid var(--bc, var(--border));
+  background: var(--b, var(--background));
+  transition: background .3s, border-color .3s, box-shadow .2s;
+  &:after {
+    content: '';
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: transform var(--d-t, .3s) var(--d-t-e, ease), opacity var(--d-o, .2s);
+  }
+  &:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: .3s;
+    --d-t: .6s;
+    --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+  }
+  &:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: .9;
+    &:checked {
+      --b: var(--disabled-inner);
+      --bc: var(--border);
+    }
+    & + label {
+      cursor: not-allowed;
+    }
+  }
+  &:hover {
+    &:not(:checked) {
+      &:not(:disabled) {
+        --bc: var(--border-hover);
+      }
+    }
+  }
+  &:focus {
+    box-shadow: 0 0 0 var(--focus);
+  }
+  &:not(.switch) {
+    width: 21px;
+    &:after {
+      opacity: var(--o, 0);
+    }
+    &:checked {
+      --o: 1;
+    }
+  }
+  & + label {
+    font-size: 14px;
+    line-height: 21px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+}
+input[type='checkbox'] {
+  &:not(.switch) {
+    border-radius: 7px;
+    &:after {
+      width: 5px;
+      height: 9px;
+      border: 2px solid var(--active-inner);
+      border-top: 0;
+      border-left: 0;
+      left: 7px;
+      top: 4px;
+      transform: rotate(var(--r, 20deg));
+    }
+    &:checked {
+      --r: 43deg;
+    }
+  }
+  &.switch {
+    width: 38px;
+    border-radius: 11px;
+    &:after {
+      left: 2px;
+      top: 2px;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      background: var(--ab, var(--border));
+      transform: translateX(var(--x, 0));
+    }
+    &:checked {
+      --ab: var(--active-inner);
+      --x: 17px;
+    }
+    &:disabled {
+      &:not(:checked) {
+        &:after {
+          opacity: .6;
+        }
+      }
+    }
+  }
+}
+
+
+ul {
+margin: 12px;
+padding: 0;
+list-style: none;
+width: 100%;
+max-width: 320px;
+
+li {
+  position: relative;
+}
+}
+
+.button {
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid black;
+  border-radius: 12px;
+}
+
+.button1:hover {
+  background-color: white;
+  color: black;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid orange;
+  border-radius: 12px;
+}
+
+.button2:hover {
+  background-color: orange;
+  color: white;
+}
+
+.w1thlove{
+  justify-content: space-around;
+  display: flex;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <p style="font-size: 2rem;">My Profile</p>
+  </div>
+  <br>
+  <p style="padding-left: 5px;">Personal Information</p><br>
+  <form class="moatain">
+    <div class="container">
+      <div class="left-item">First name</div>
+      <div class="right-item">Coco</div>
+    </div>
+
+    <div class="container">
+      <div class="left-item">Last name</div>
+      <div class="right-item">Liu</div>
+    </div>
+
+    <div class="container">
+      <div class="left-item">CWS ID</div>
+      <div class="right-item">60330058</div>
+    </div>
+
+    <div class="container">
+      <div class="left-item">Phone</div>
+      <div class="right-item">+86 13902100000</div>
+    </div>
+
+    <div class="container">
+      <div class="left-item">Email Address</div>
+      <div class="right-item">coco.liu@cat.com</div>
+    </div>
+
+    <div class="container">
+      <div class="left-item">Role</div>
+      <div class="right-item">wasdwasd</div>
+    </div>
+
+    <div class="container">
+      <div class="left-item">Facility</div>
+      <div class="right-item"><img src="./arrow.svg" width="15px" height="15px"></div>
+    </div>
+
+  </form>
+
+  <br>
+
+  <p style="padding-left: 5px;">Prefrence Setting</p>
+  <br>
+  <form class="moatain">
+    <div class="container">
+      <div class="left-item">Language</div>
+      <div class="right-item"><img src="./arrow.svg" width="15px" height="15px"></div>
+    </div>
+
+    <div class="container">
+      <div class="left-item"><img src="./LogosMicrosoftTeams.svg" width="20px" height="20px">  teams</div>
+      <div class="right-item">
+        <ul>
+        <li>
+          <input  type="checkbox" class="switch" checked>
+        </li>
+      </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="left-item"><img src="./LogosMicrosoftIcon.svg" width="20px" height="20px">  Email</div>
+      <div class="right-item">
+        <ul>
+        <li>
+          <input type="checkbox" class="switch" checked>
+        </li>
+      </ul>
+      </div>
+    </div>
+
+    <p>Notification Method Controls how you receive Originator and Owner Notification only (Escalation notification is strictly through Teams Channels).</p>
+
+    <div class="container">
+      <div class="left-item">Teams code</div>
+      <div class="right-item">WS0026</div>
+    </div>
+  </form>
+ 
+    <div class="w1thlove">
+      <footer>
+      <button class="button button1">Cancel</button>
+      <button class="button button2">Submit</button> 
+      </footer>
+    </div>
+
+    </body>
+   
+
+</html>

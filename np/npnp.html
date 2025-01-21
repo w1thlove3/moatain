@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage</title>
+  <style>
+    .header {
+      background-color: black;
+      color: white;
+      padding: 0px;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0 auto;
+      padding: 0;
+      overflow: hidden;
+      background-color: black;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: rgb(74, 71, 71);
+    }
+
+    .active {
+      color: orange;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: lightgrey;
+    }
+
+    .container {
+      background-color: white;
+      border: 2px solid white;
+      border-radius: 8px;
+      padding: 12px;
+      height: 50px;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    #myprofile {
+      margin-top: 100px;
+    }
+
+    #dueDateBox {
+      margin-top: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <p style="font-size: 2rem;">Manage</p>
+  </div>
+  <div class="container" id="myprofile">
+    <p>My Profile</p><a href="myprofile.htm"><img src="./arrow.svg" width="20px" height="20px"></a>
+  </div>
+  <div class="container" id="dueDateBox">
+    <p>Due Date Change Requests</p><a href="dueDateBox.htm"><img src="./arrow.svg" width="20px" height="20px"></a>
+  </div>
+  <ul>
+    <li><img src="New.svg" style="background-color: white;"><a href="">New</a></li>
+    <li><img src="ToDo.svg" style="background-color: white;"><a href="">To Do</a></li>
+    <li><img src="FacilityView.svg" style="background-color: white;"><a href="">Facility View</a></li>
+    <li><img src="Manage.svg" style="background-color: white;"><a class="active" href="">Manage</a></li>
+  </ul>
+</body>
+
+</html>
